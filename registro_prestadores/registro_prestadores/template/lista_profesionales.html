@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Profesionales</title>
+</head>
+<body>
+    <h1>Lista de Profesionales</h1>
+    <ul>
+        {% for profesional in profesionales %}
+            <li>
+                {{ profesional.Nombres }} {{ profesional.ApellidoPaterno }} - RUT: {{ profesional.Rut }}-{{ profesional.Dv }}
+            </li>
+        {% empty %}
+            <li>No hay profesionales registrados.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

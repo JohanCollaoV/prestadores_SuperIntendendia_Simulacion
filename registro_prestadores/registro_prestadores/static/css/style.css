@@ -1,0 +1,136 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.text-inicio-2 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    width: 350px;
+    text-align: justify;
+    margin-top: 4%;
+}
+
+.text-inicio {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: -2%;
+    line-height: 1.5;
+}
+
+a {
+    color: #3498db; /* Color azul para los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Estilos para enlaces al pasar el mouse */
+a:hover {
+    color: #2c3e50; /* Oscurece el color al pasar el mouse */
+    text-decoration: underline; /* Agrega subrayado al pasar el mouse si deseas */
+} 
+
+.content-title-inicio {
+    font-size: 12px;
+    padding-top: 13px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.content-middle {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: sans-serif !important;
+    color: #555;
+    font-weight: lighter; /* Hace la letra más delgada */
+    font-size: 0.9375rem;
+    padding-top: 70px;
+    background-size: 100%;
+    background-image: url(../img/3.png);
+    background-size: cover !important;
+    background-attachment: fixed;
+    display: block;
+}
+
+.content-logo-inicio {
+    background-repeat: no-repeat;
+    color: #f2f2f2;
+    text-align: center;
+    background-image: url(../img/userportal_logo.jpg);
+    width: 15em;
+    height: 6em;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.search-box {
+    position: relative;
+    width: 90%; /* Ajustamos el ancho del buscador al mismo ancho que el texto debajo */
+    margin: auto; /* Centra el buscador horizontalmente y añade un poco de espacio arriba/abajo */
+    font-size: 16px; /* Tamaño de fuente para la entrada */
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 8px 0px 8px 0px; /* Espacio para el texto dentro del input */
+    border: 2px solid #ccc; /* Borde como en tu imagen */
+    border-radius: 5px; /* Bordes menos redondeados */
+    outline: none; /* Quita el outline al hacer foco */
+    box-shadow: none; /* Sin sombras */
+}
+
+.search-box button {
+    position: absolute;
+    right: 0%; /* Coloca el botón justo al borde, dentro del campo de entrada */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0 5px; /* Ajusta el padding para evitar desbordamiento del icono */
+}
+
+.search-box button i {
+    color: #3498db; /* Color del icono, ajusta según necesidad */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilos para el hover del botón */
+.search-box button:hover i {
+    color: #2980b9; /* Oscurece el color al pasar el mouse */
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    color: red;
+    border-radius: 5px;
+    font-size: 13px;
+    transform: translateY(-100%);
+}

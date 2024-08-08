@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Nacional de Prestadores Individuales de Salud</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-middle ng-scope">
+        <div class="content-header-inicio">
+            <a href="#" onclick="location.reload(true); return false;">
+                <div class="content-logo-inicio"></div>
+            </a>
+        </div>
+        <div class="content-title-inicio">
+            <h3>
+                Registro Nacional de<br>Prestadores Individuales de Salud
+            </h3>
+        </div>
+        <div class="search-box">
+            <form action="{% url 'detalle_profesional' %}" method="get">
+                <input type="text" name="rut" placeholder="Buscar">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+                {% endif %}
+            </form>
+            <!-- Área para mostrar mensajes de error -->
+
+            <!-- Formulario para buscar por RUT -->
+        </div>
+        <div class="text-inicio">
+            <h4>Puede buscar por nombre y/o apellido, RUN, título,
+                especialidad o número de registro.</h4>
+        </div>
+        <div class="text-inicio-2">
+            <h4>
+                Acorde a lo dispuesto en el <a href="https://www.leychile.cl/Navegar?idNorma=287530"
+                    target="_blank">Decreto
+                    16 del 19 de enero del 2007 del
+                    Ministerio de Salud</a>, se pone a disposición la
+                información de todos los profesionales de la salud,
+                legalmente habilitados para ejercer su profesión.<br>
+            </h4>
+            <h4>
+                Verificación de validez de Certificado de Inscripción, consulte en
+                <a href="https://emisorcertificados.superdesalud.gob.cl/ValidacionCertificados/">
+                    emisorcertificados.superdesalud.gob.cl/ValidacionCertificados/</a>.
+            </h4>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Profesional</title>
+    <link rel="stylesheet" href="../static/css/style2.css">
+</head>
+
+<body>
+    <div class="header_logo">
+        <a href="/index">
+            <div class="logo"></div>
+            <div class="content-prestador">
+                <h5>
+                    Registro Nacional de<br>Prestadores Individuales de Salud
+                </h5>
+            </div>
+        </a>
+    </div>
+    <div class="align-text ng-scope">
+        <h3 class="ng-binding">{{ profesional.Nombres }} {{ profesional.ApellidoPaterno }} {{ profesional.ApellidoMaterno }}</h3>
+    </div>
+    <div class="x_content">
+        <table class="table-container">
+            <tbody>
+                <tr>
+                    <th>Datos</th>
+                    <th>Detalles del prestador</th>
+                </tr>
+
+                <tr>
+                    <td>RUN</td>
+                    <td class="ng-binding"> {{ profesional.Rut }}-{{ profesional.Dv }}</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td class="ng-binding">{{ profesional.Nombres }} {{ profesional.ApellidoPaterno }} {{ profesional.ApellidoMaterno }}</td>
+                </tr>
+                <tr>
+                    <td>N° de Registro</td>
+                    <td class="ng-binding">{{ profesional.NroRegistro }}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de Inscripción</td>
+                    <td class="ng-binding">{{ profesional.FechaRegistro|date:"d/m/Y" }}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de Nacimiento</td>
+                    <td class="ng-binding">{{ profesional.FechaNacimiento|date:"d/m/Y" }}</td>
+                </tr>
+                <tr>
+                    <td>Nacionalidad</td>
+                    <td class="ng-binding">{{ profesional.Nacionalidad }}</td>
+                </tr>
+                <tr>
+                    <td>Sexo</td>
+                    <td class="ng-binding">{{ profesional.Sexo }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="x_content">
+        <table class="table-container">
+            {% for antecedente in antecedentes %}
+            <tbody>
+                <tr>
+                    <th>Antecedente del Título o habilitación profesional: {{ antecedente.CodAntecedente }}</th>
+                </tr>
+                <tr>
+                    <td>Posee título de {{ antecedente.CodAntecedente }} otorgado por la {{ antecedente.Procedencia }} emitido el {{ antecedente.FechaAntecedente|date:"d/m/Y" }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
